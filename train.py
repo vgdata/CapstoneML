@@ -14,8 +14,8 @@ from azureml.data.dataset_factory import TabularDatasetFactory
 run = Run.get_context()
 ws = run.experiment.workspace
 found = False
-key = "heart"
-description_text = "Heart failure dataset to predict Death Event"
+key = "heart-disease-kaggle.csv"
+description_text = "Heart failure dataset ::: to predict Death event"
 
 if key in ws.datasets.keys(): 
         found = True
