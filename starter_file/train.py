@@ -15,7 +15,8 @@ run = Run.get_context()
 ws = run.experiment.workspace
 found = False
 key = "heart-disease-kaggle.csv"
-description_text = "Heart failure dataset ::: to predict Death event"
+description_text = "Prediction: Death Event: From Heart Failure Dataset"
+
 
 if key in ws.datasets.keys(): 
         found = True
