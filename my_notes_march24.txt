@@ -1,0 +1,24 @@
+https://ml.azure.com/?tid=660b3398-b80e-49d2-bc5b-ac1dc93b5254&wsid=/subscr
+i
+pti
+o
+ns/6b4af8be-9931-443e-90f6-c4c34a1f9737/resourcegroups/aml-quickstarts-141230/workspaces/quick-starts-ws-141230
+.....................
+
+
+from azureml.automl.core.shared import constants
+env = best_run.get_environment()
+
+script_file = 'score.py'
+
+best_run.download_file('outputs/scoring_file_v_1_0_0.py', script_file)
+best_run.download_file(constants.CONDA_ENV_FILE_PATH, 'env.yml')
+
+
+....................
+
+
+azure env - march 24
+/azureml-envs/azureml_2b14f450572e78de640d54eaabed5e4d/lib/
+
+/azureml-envs/azureml_2b14f450572e78de640d54eaabed5e4d/lib/
