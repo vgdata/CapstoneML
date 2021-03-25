@@ -14,8 +14,8 @@ from azureml.data.dataset_factory import TabularDatasetFactory
 run = Run.get_context()
 ws = run.experiment.workspace
 found = False
-key = "heart-disease-kaggle.csv"
-description_text = "Prediction: Death Event: From Heart Failure Dataset"
+key = "heart-disease-kaggle"
+description_text = "Stroke Prediction: from heart disease dataset"
 
 
 if key in ws.datasets.keys(): 
@@ -44,8 +44,8 @@ def main():
 
     args = parser.parse_args()
 
-    run.log("Regularization Strength: ", np.float(args.C))
-    run.log("Max iterations: ", np.int(args.max_iter))
+    run.log("Regularization Strength", np.float(args.C))
+    run.log("Max iterations", np.int(args.max_iter))
 
     model = LogisticRegression(C=args.C, max_iter=args.max_iter).fit(x_train, y_train)
 
